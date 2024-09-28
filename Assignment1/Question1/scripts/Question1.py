@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 data = pd.read_csv('Assignment1/Question1/data/data.csv')
 
 df = pd.DataFrame(data)
-
+df['Frailty'] = df['Frailty'].map({'N': 0, 'Y': 1})
 print("Data Overview")
 print(df.describe())
 
